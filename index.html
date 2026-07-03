@@ -8,7 +8,9 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<link rel="icon" href="images/Untitled-3.png" sizes="512x512" type="image/png">
-	<head>
+		<link rel="manifest" href="manifest.json">
+
+		
   <!-- Basic Open Graph -->
   <meta property="og:title" content="Code-Tino - Download Movies and Computer softwares">
   <meta property="og:description" content="Download Movies and Computer softwares.">
@@ -34,7 +36,7 @@
 		
 </head>
 
-	</head>
+	
 
 	<body class="is-preload">
 
@@ -584,7 +586,17 @@ function searchSite() {
     card.style.display = text.includes(input) ? '' : 'none';
   });
 }
+
+				
 </script>
+
+				<script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("/sw.js")
+    .then(() => console.log("Service Worker registered"));
+}
+</script>
+
 
 	</body>
 	
